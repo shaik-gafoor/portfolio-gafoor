@@ -57,14 +57,14 @@ export const skills = {
   // ],
   tools: [
     "Git",
-    "Docker",
-    "AWS",
+    // "Docker",
+    // "AWS",
     "IntelliJ IDEA",
     "HTTPie",
     "Postman",
     "VS Code",
     "Linux",
-    "Agile Methodology",
+    // "Agile Methodology",
   ],
 };
 
