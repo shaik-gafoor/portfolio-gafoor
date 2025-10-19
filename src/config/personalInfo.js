@@ -1,8 +1,8 @@
 // Personal Information Configuration
 export const personalInfo = {
   name: "Shaik Gafoor",
-  title: "Software Developer & Tester",
-  bio: "Passionate software developer and testing professional with expertise in modern web technologies and quality assurance practices.",
+  title: "Full Stack Developer",
+  bio: "I’m a passionate Full Stack Developer with a strong focus on building innovative, efficient, and user-friendly web applications. I take pride in crafting seamless digital experiences and continuously improving my skills to deliver impactful solutions.",
   email: "gafoor7898@gmail.com", // Update with your actual email
   phone: "+91-7386946555", // Update with your actual phone
   location: "India", // Update with your location
