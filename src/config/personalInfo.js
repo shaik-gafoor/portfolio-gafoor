@@ -129,8 +129,8 @@ export const projects = [
     imageUrl: "/assets/foodspotimage.jpg", // replace with your actual image path
     category: "Full Stack",
     status: "Completed",
-    startDate: "2025-07-10",
-    endDate: "2025-07-25",
+    startDate: "2024-07-10",
+    endDate: "2024-07-25",
     features: [
       "User authentication with JWT and secure login/signup system",
       "Dynamic menu with restaurant and item filtering",
@@ -192,11 +192,11 @@ export const projects = [
     ],
     githubUrl: "https://github.com/shaik-gafoor/Latracal_Solution_Assignment",
     liveUrl: "https://livemoviesreviewonline.netlify.app/",
-    imageUrl: ".\\assets\\moviereview.jpg",
+    imageUrl: "/assets/moviereview.jpg",
     category: "Full Stack",
     status: "Completed",
-    startDate: "2025-09-01",
-    endDate: "2025-09-14",
+    startDate: "2024-09-01",
+    endDate: "2024-09-14",
     features: [
       "User authentication with JWT",
       "Movie discovery and search system",
@@ -227,8 +227,8 @@ export const projects = [
     imageUrl: "/assets/smart-tasker.jpg",
     category: "Full Stack",
     status: "Completed",
-    startDate: "2025-04-01",
-    endDate: "2025-04-04",
+    startDate: "2024-04-01",
+    endDate: "2024-04-04",
     features: [
       "Add, edit, and delete tasks with real-time updates",
       "User authentication using JWT for secure access",
@@ -238,7 +238,7 @@ export const projects = [
     ],
   },
   {
-    id: 3,
+    id: 5,
     title: "CycleWeb Online Cycle Showroom",
     description:
       "A full-stack cycle showroom web application where users can explore various cycle models with detailed images, descriptions, and prices. Admins can easily manage the cycle listings, including adding, updating, or removing cycles. All images are securely stored and accessed using Cloudinary.",
@@ -250,11 +250,13 @@ export const projects = [
       "Cloudinary",
       "JWT Authentication",
     ],
+    githubUrl: "https://github.com/shaik-gafoor/cycleweb",
+    liveUrl: null, // Add your live URL if available
     imageUrl: "/assets/cycleweb.jpg",
     category: "Full Stack",
     status: "Completed",
-    startDate: "2025-09-01",
-    endDate: "2025-09-11",
+    startDate: "2024-08-01",
+    endDate: "2024-08-11",
     features: [
       "Interactive homepage displaying available cycle models with images and prices",
       "Admin panel to add, update, and delete cycles",
@@ -272,7 +274,7 @@ export const certificates = [
     title: "Java programming Certificate",
     issuer: "Infosys Springboard",
     date: "2025 june",
-    url: "https://coursera.org/certificate/react-dev",
+    url: "https://drive.google.com/file/d/1C0B9z85jA00e1Etb35qb7ELXIXLON4B_/view?usp=sharing",
     imageUrl: "/assets/java_springboard.jpg",
   },
   {

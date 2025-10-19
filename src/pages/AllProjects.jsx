@@ -26,10 +26,21 @@ const AllProjects = () => {
   const filteredProjects = projects
     .filter((project) => filter === "All" || project.category === filter)
     .sort((a, b) => {
+      const dateA = new Date(a.startDate);
+      const dateB = new Date(b.startDate);
+
+      // Handle invalid dates by treating them as very old dates
+      const validDateA = isNaN(dateA.getTime())
+        ? new Date("1900-01-01")
+        : dateA;
+      const validDateB = isNaN(dateB.getTime())
+        ? new Date("1900-01-01")
+        : dateB;
+
       if (sortBy === "newest") {
-        return new Date(b.startDate) - new Date(a.startDate);
+        return validDateB.getTime() - validDateA.getTime();
       } else {
-        return new Date(a.startDate) - new Date(b.startDate);
+        return validDateA.getTime() - validDateB.getTime();
       }
     });
 
