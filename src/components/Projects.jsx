@@ -58,9 +58,22 @@ const Projects = () => {
               onMouseLeave={() => setHoveredProject(null)}
               className="group bg-gray-50 dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transition-all transform hover:-translate-y-2"
             >
-              {/* Project Image Placeholder */}
-              <div className="h-48 bg-gradient-to-br from-primary-400 to-primary-600 relative overflow-hidden">
-                <div className="absolute inset-0 bg-black bg-opacity-20 flex items-center justify-center">
+              {/* Project Image */}
+              <div className="h-48 relative overflow-hidden">
+                <img
+                  src={project.imageUrl}
+                  alt={project.title}
+                  className="w-full h-full object-cover transition-transform group-hover:scale-105"
+                  onError={(e) => {
+                    // Fallback to placeholder if image fails to load
+                    e.target.style.display = "none";
+                    e.target.nextSibling.style.display = "flex";
+                  }}
+                />
+                <div
+                  className="absolute inset-0 bg-gradient-to-br from-primary-400 to-primary-600 flex items-center justify-center"
+                  style={{ display: "none" }}
+                >
                   <Folder size={48} className="text-white opacity-60" />
                 </div>
 

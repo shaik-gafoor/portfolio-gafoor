@@ -190,9 +190,24 @@ const AllProjects = () => {
                         </div>
                       </div>
 
-                      {/* Project Image Placeholder */}
-                      <div className="w-24 h-24 bg-gradient-to-br from-primary-400 to-primary-600 rounded-lg flex items-center justify-center">
-                        <Folder size={32} className="text-white opacity-60" />
+                      {/* Project Image */}
+                      <div className="w-24 h-24 rounded-lg overflow-hidden flex-shrink-0">
+                        <img
+                          src={project.imageUrl}
+                          alt={project.title}
+                          className="w-full h-full object-cover"
+                          onError={(e) => {
+                            // Fallback to placeholder if image fails to load
+                            e.target.style.display = "none";
+                            e.target.nextSibling.style.display = "flex";
+                          }}
+                        />
+                        <div
+                          className="w-full h-full bg-gradient-to-br from-primary-400 to-primary-600 flex items-center justify-center"
+                          style={{ display: "none" }}
+                        >
+                          <Folder size={32} className="text-white opacity-60" />
+                        </div>
                       </div>
                     </div>
 

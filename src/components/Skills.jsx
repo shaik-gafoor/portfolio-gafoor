@@ -1,7 +1,17 @@
 import React, { useState } from "react";
 import { motion } from "framer-motion";
 import { Code, Database, TestTube, Wrench } from "lucide-react";
-import { skills } from "../config/personalInfo";
+import { skills as importedSkills } from "../config/personalInfo";
+
+// Provide a safe fallback in case importedSkills is undefined or missing categories
+const skillsData = {
+  frontend: Array.isArray(importedSkills?.frontend)
+    ? importedSkills.frontend
+    : [],
+  backend: Array.isArray(importedSkills?.backend) ? importedSkills.backend : [],
+  testing: Array.isArray(importedSkills?.testing) ? importedSkills.testing : [],
+  tools: Array.isArray(importedSkills?.tools) ? importedSkills.tools : [],
+};
 
 const Skills = () => {
   const [activeCategory, setActiveCategory] = useState("frontend");
@@ -10,25 +20,25 @@ const Skills = () => {
     frontend: {
       title: "Frontend Development",
       icon: Code,
-      skills: skills.frontend,
+      skills: skillsData.frontend,
       color: "from-blue-500 to-cyan-500",
     },
     backend: {
       title: "Backend Development",
       icon: Database,
-      skills: skills.backend,
+      skills: skillsData.backend,
       color: "from-green-500 to-emerald-500",
     },
-    testing: {
-      title: "Testing & QA",
-      icon: TestTube,
-      skills: skills.testing,
-      color: "from-purple-500 to-pink-500",
-    },
+    // testing: {
+    //   title: "Testing & QA",
+    //   icon: TestTube,
+    //   skills: skillsData.testing,
+    //   color: "from-purple-500 to-pink-500",
+    // },
     tools: {
       title: "Tools & Technologies",
       icon: Wrench,
-      skills: skills.tools,
+      skills: skillsData.tools,
       color: "from-orange-500 to-red-500",
     },
   };
@@ -118,7 +128,7 @@ const Skills = () => {
           <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
             <div>
               <div className="text-3xl font-bold text-primary-600 dark:text-primary-400 mb-2">
-                {skills.frontend.length}+
+                {skillsData.frontend.length}+
               </div>
               <div className="text-gray-600 dark:text-gray-300">
                 Frontend Technologies
@@ -126,23 +136,23 @@ const Skills = () => {
             </div>
             <div>
               <div className="text-3xl font-bold text-green-600 dark:text-green-400 mb-2">
-                {skills.backend.length}+
+                {skillsData.backend.length}+
               </div>
               <div className="text-gray-600 dark:text-gray-300">
                 Backend Technologies
               </div>
             </div>
-            <div>
+            {/* <div>
               <div className="text-3xl font-bold text-purple-600 dark:text-purple-400 mb-2">
-                {skills.testing.length}+
+                {skillsData.testing.length}+
               </div>
-              <div className="text-gray-600 dark:text-gray-300">
+              {/* <div className="text-gray-600 dark:text-gray-300">
                 Testing Tools
-              </div>
-            </div>
+              </div> */}
+            {/* </div> */}
             <div>
               <div className="text-3xl font-bold text-orange-600 dark:text-orange-400 mb-2">
-                {skills.tools.length}+
+                {skillsData.tools.length}+
               </div>
               <div className="text-gray-600 dark:text-gray-300">
                 Development Tools
