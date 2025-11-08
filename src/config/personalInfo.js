@@ -289,7 +289,7 @@ export const certificates = [
     id: 3,
     title: "AWS Cloud Practitioner",
     issuer: "Amazon Web Services",
-    date: "2024-03-10",
+    date: "2025-11-08",
     url: "https://drive.google.com/file/d/18zK7BpfDn--VTaPhWptrPqlwSuLYIfeS/view?usp=sharing",
     imageUrl: "/assets/cert3.jpg",
   },
