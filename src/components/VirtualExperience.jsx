@@ -26,8 +26,8 @@ const VirtualExperience = () => {
           {virtualExperience.map((experience, index) => (
             <motion.div
               key={experience.id}
-              initial={{ opacity: 0, x: index % 2 === 0 ? -50 : 50 }}
-              whileInView={{ opacity: 1, x: 0 }}
+              initial={{ opacity: 0, y: 24 }}
+              whileInView={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: index * 0.2 }}
               viewport={{ once: true }}
               className="relative"

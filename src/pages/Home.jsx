@@ -34,7 +34,7 @@ const Home = () => {
   };
 
   return (
-    <main>
+    <main className="overflow-x-hidden">
       <motion.div
         variants={sectionVariants}
         initial="hidden"
