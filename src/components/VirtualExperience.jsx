@@ -15,11 +15,10 @@ const VirtualExperience = () => {
           className="text-center mb-16"
         >
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
-            Virtual Experience
+            Experience
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Professional internships and virtual experiences that shaped my
-            career
+            Professional experiences and internships that shaped my career
           </p>
         </motion.div>
 
@@ -106,7 +105,7 @@ const VirtualExperience = () => {
                             />
                             {achievement}
                           </li>
-                        )
+                        ),
                       )}
                     </ul>
                   </div>

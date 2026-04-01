@@ -22,7 +22,7 @@ export const personalInfo = {
   },
 
   // Profile Image
-  profileImage: "/assets/profile.jpg",
+  profileImage: "/assets/profile.png",
 };
 
 // Skills Configuration
@@ -36,10 +36,14 @@ export const skills = {
     "Tailwind CSS",
     "Bootstrap",
     "Redux",
+    "Recoil",
   ],
   backend: [
     "Node.js",
     "Express.js",
+    "Spring Boot",
+    "Spring",
+    "Java",
     "REST APIs",
     "MongoDB",
     "PostgreSQL",
@@ -57,14 +61,13 @@ export const skills = {
   // ],
   tools: [
     "Git",
-    // "Docker",
-    // "AWS",
+    "Maven",
     "IntelliJ IDEA",
     "HTTPie",
     "Postman",
     "VS Code",
+    "MySQL Workbench",
     "Linux",
-    // "Agile Methodology",
   ],
 };
 
@@ -72,10 +75,34 @@ export const skills = {
 export const virtualExperience = [
   {
     id: 1,
+    company: "DNCS GLOBAL Pvt Ltd",
+    role: "Java Full Stack Developer",
+    duration: "March 2025 - Present",
+    type: "Present Experience",
+    description:
+      "Building a product with DNCS GLOBAL, developing full-stack applications using Java and modern web technologies. Collaborating with cross-functional teams to deliver scalable and efficient solutions.",
+    technologies: [
+      "Tailwind CSS",
+      "React",
+      "Recoil",
+      "TypeScript",
+      "Spring Boot",
+      "Java",
+      "REST APIs",
+      "MySql",
+    ],
+    achievements: [
+      "Building scalable product solutions with DNCS GLOBAL",
+      "Implementing complex features using Spring Boot and React",
+      "Collaborating with team to deliver high-quality code",
+    ],
+  },
+  {
+    id: 2,
     company: "SmartInternZ",
     role: "FullStackDeveloper Intern",
     duration: "May 2025 - July 2025",
-    type: "Virtual Internship",
+    type: "Internship",
     description:
       "Developed responsive web applications using MERN stack and worked with real-world projects.",
     technologies: [
