@@ -5,7 +5,6 @@ import Hero from "../components/Hero";
 import VirtualExperience from "../components/VirtualExperience";
 import Skills from "../components/Skills";
 import Projects from "../components/Projects";
-import GitHubStats from "../components/GitHubStats";
 import Certificates from "../components/Certificates";
 import Contact from "../components/Contact";
 
@@ -71,15 +70,6 @@ const Home = () => {
         custom={0.15}
       >
         <Projects />
-      </motion.div>
-      <motion.div
-        variants={sectionVariants}
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.2 }}
-        custom={0.2}
-      >
-        <GitHubStats />
       </motion.div>
       <motion.div
         variants={sectionVariants}
