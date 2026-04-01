@@ -78,7 +78,7 @@ export const virtualExperience = [
     company: "DNCS GLOBAL Pvt Ltd",
     role: "Java Full Stack Developer",
     duration: "March 2025 - Present",
-    type: "Present Experience",
+    type: "Full-Time",
     description:
       "Building a product with DNCS GLOBAL, developing full-stack applications using Java and modern web technologies. Collaborating with cross-functional teams to deliver scalable and efficient solutions.",
     technologies: [
