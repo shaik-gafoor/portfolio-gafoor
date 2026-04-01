@@ -31,11 +31,53 @@ const Hero = () => {
     leetcode: Code,
   };
 
+  const contentVariants = {
+    hidden: { opacity: 0, y: 24 },
+    visible: (delay = 0) => ({
+      opacity: 1,
+      y: 0,
+      transition: { duration: 0.6, delay, ease: "easeOut" },
+    }),
+  };
+
+  const socialContainer = {
+    hidden: { opacity: 0 },
+    visible: {
+      opacity: 1,
+      transition: {
+        staggerChildren: 0.08,
+        delayChildren: 0.75,
+      },
+    },
+  };
+
+  const socialItem = {
+    hidden: { opacity: 0, y: 12, scale: 0.9 },
+    visible: {
+      opacity: 1,
+      y: 0,
+      scale: 1,
+      transition: { duration: 0.35, ease: "easeOut" },
+    },
+  };
+
   return (
     <section
       id="about"
-      className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800 pt-20"
+      className="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100 dark:from-gray-900 dark:to-gray-800 pt-20 overflow-hidden"
     >
+      <div className="pointer-events-none absolute inset-0">
+        <motion.div
+          className="absolute top-24 left-[8%] w-52 h-52 rounded-full bg-cyan-300/20 dark:bg-cyan-500/20 blur-3xl"
+          animate={{ y: [0, -18, 0], x: [0, 8, 0] }}
+          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
+        />
+        <motion.div
+          className="absolute bottom-10 right-[10%] w-64 h-64 rounded-full bg-blue-400/20 dark:bg-indigo-500/20 blur-3xl"
+          animate={{ y: [0, 20, 0], x: [0, -10, 0] }}
+          transition={{ duration: 9, repeat: Infinity, ease: "easeInOut" }}
+        />
+      </div>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           {/* Profile Image */}
@@ -45,12 +87,13 @@ const Hero = () => {
             transition={{ duration: 0.6 }}
             className="flex justify-center lg:justify-end order-2 lg:order-1"
           >
-            <div className="relative">
+            <div className="relative group">
+              <div className="absolute inset-0 rounded-full bg-gradient-to-tr from-primary-400/40 to-cyan-400/40 blur-xl scale-95 animate-glow-pulse"></div>
               <div className="w-64 h-64 sm:w-72 sm:h-72 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden border-8 border-white dark:border-gray-700 shadow-2xl">
                 <img
                   src={personalInfo.profileImage}
                   alt={personalInfo.name}
-                  className="w-full h-full object-cover object-top"
+                  className="w-full h-full object-cover object-top transition-transform duration-700 group-hover:scale-105"
                 />
               </div>
               {/* Floating decoration */}
@@ -71,30 +114,33 @@ const Hero = () => {
           >
             <motion.h1
               className="text-4xl md:text-6xl font-bold text-gray-900 dark:text-white mb-4"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
+              variants={contentVariants}
+              initial="hidden"
+              animate="visible"
+              custom={0.3}
             >
               Hi, I'm{" "}
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-indigo-600">
+              <span className="text-transparent bg-clip-text bg-gradient-to-r from-primary-600 to-indigo-600 animate-gradient-shift bg-[length:200%_200%]">
                 {personalInfo.name.split(" ")[1]}
               </span>
             </motion.h1>
 
             <motion.h2
               className="text-xl md:text-2xl text-gray-600 dark:text-gray-300 mb-6 font-medium"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.4 }}
+              variants={contentVariants}
+              initial="hidden"
+              animate="visible"
+              custom={0.4}
             >
               {personalInfo.title}
             </motion.h2>
 
             <motion.p
               className="text-lg text-gray-700 dark:text-gray-300 mb-8 leading-relaxed max-w-2xl"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.5 }}
+              variants={contentVariants}
+              initial="hidden"
+              animate="visible"
+              custom={0.5}
             >
               {personalInfo.bio}
             </motion.p>
@@ -102,9 +148,10 @@ const Hero = () => {
             {/* Action Buttons */}
             <motion.div
               className="flex flex-wrap gap-4 mb-8"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.6 }}
+              variants={contentVariants}
+              initial="hidden"
+              animate="visible"
+              custom={0.6}
             >
               <button
                 onClick={handleViewResume}
@@ -126,23 +173,25 @@ const Hero = () => {
             {/* Social Links */}
             <motion.div
               className="flex gap-4"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.7 }}
+              variants={socialContainer}
+              initial="hidden"
+              animate="visible"
             >
               {Object.entries(personalInfo.social).map(([platform, url]) => {
                 const Icon = socialIcons[platform];
                 return (
-                  <a
+                  <motion.a
                     key={platform}
                     href={url}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-3 bg-white dark:bg-gray-800 rounded-lg shadow-md hover:shadow-lg text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 transition-all transform hover:-translate-y-1"
                     aria-label={`Visit ${platform} profile`}
+                    variants={socialItem}
+                    whileHover={{ y: -6, scale: 1.07 }}
                   >
                     <Icon size={24} />
-                  </a>
+                  </motion.a>
                 );
               })}
             </motion.div>

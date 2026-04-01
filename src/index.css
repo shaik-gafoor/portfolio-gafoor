@@ -24,6 +24,38 @@ html {
   scroll-behavior: smooth;
 }
 
+@keyframes glowPulse {
+  0%,
+  100% {
+    opacity: 0.45;
+    transform: scale(0.96);
+  }
+  50% {
+    opacity: 0.75;
+    transform: scale(1.04);
+  }
+}
+
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-glow-pulse {
+  animation: glowPulse 4.2s ease-in-out infinite;
+}
+
+.animate-gradient-shift {
+  animation: gradientShift 5s ease-in-out infinite;
+}
+
 /* Line clamp utility for text truncation */
 .line-clamp-3 {
   display: -webkit-box;
