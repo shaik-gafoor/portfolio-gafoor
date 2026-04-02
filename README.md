@@ -12,7 +12,6 @@ A modern, responsive portfolio website built with React, Tailwind CSS, and Frame
   - Virtual Experience/Internships timeline
   - Interactive Skills showcase
   - Featured Projects with detailed view
-  - GitHub Activity stats
   - Certifications gallery
   - Contact form with social links
   - Dedicated "All Projects" page with timeline view
