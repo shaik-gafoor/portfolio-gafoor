@@ -64,7 +64,7 @@ src/
 │   ├── VirtualExperience.jsx
 │   ├── Skills.jsx      # Interactive skills section
 │   ├── Projects.jsx    # Featured projects
-│   ├── GitHubStats.jsx # GitHub activity showcase
+│   ├── GitHubStats.jsx # GitHub activity showcase(Present not included in website)
 │   ├── Certificates.jsx
 │   ├── Contact.jsx     # Contact form
 │   └── Footer.jsx
