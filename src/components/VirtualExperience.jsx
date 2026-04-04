@@ -18,7 +18,7 @@ const VirtualExperience = () => {
             Experience
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-            Professional experiences and internships that shaped my career
+            Professional experiences and internship that shaped my career
           </p>
         </motion.div>
 
