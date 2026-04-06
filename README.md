@@ -131,7 +131,7 @@ Easy integration with:
 
 ## 📊 GitHub Stats
 
-The GitHub Stats section currently shows dummy data. To integrate real data:
+The GitHub Status section currently shows dummy data. To integrate real data:
 
 1. Use GitHub API to fetch your statistics
 2. Consider using libraries like `github-readme-stats`
