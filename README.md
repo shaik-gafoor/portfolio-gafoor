@@ -139,7 +139,7 @@ The GitHub Status section currently shows dummy data. To integrate real data:
 
 ## 🚀 Deployment
 
-The portfolio can be deployed to :
+The portfolio can be deployed on:
 
 - Vercel (recommended for React apps)
 - Netlify
